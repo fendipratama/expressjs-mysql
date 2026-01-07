@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  api:
+    image: ghcr.io/fendipratama/expressjs-mysql:latest
+    container_name: express-api
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
