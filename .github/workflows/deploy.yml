@@ -33,6 +33,6 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             cd /var/www/expressjs-mysql
-            docker pull ghcr.io/${{ github.actor }}/expressjs-mysql:latest
+            docker pull ghcr.io/fendipratama/expressjs-mysql:latest
             docker compose down
             docker compose up -d
